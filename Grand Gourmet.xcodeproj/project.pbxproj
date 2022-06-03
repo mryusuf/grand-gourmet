@@ -22,7 +22,6 @@
 		8257E83F2849AA7800BC9A27 /* GourmetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257E83E2849AA7800BC9A27 /* GourmetDetailView.swift */; };
 		8257E8412849AA9200BC9A27 /* GourmetDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257E8402849AA9200BC9A27 /* GourmetDetailViewModel.swift */; };
 		8257E8442849AC4C00BC9A27 /* TagViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257E8432849AC4C00BC9A27 /* TagViewComponent.swift */; };
-		8257E8462849AD8E00BC9A27 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257E8452849AD8E00BC9A27 /* SwiftUIView.swift */; };
 		8257E8492849B41500BC9A27 /* GourmetDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257E8482849B41500BC9A27 /* GourmetDetailRepository.swift */; };
 		8257E84B2849B47C00BC9A27 /* GourmetDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257E84A2849B47C00BC9A27 /* GourmetDetailModel.swift */; };
 /* End PBXBuildFile section */
@@ -42,7 +41,6 @@
 		8257E83E2849AA7800BC9A27 /* GourmetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetDetailView.swift; sourceTree = "<group>"; };
 		8257E8402849AA9200BC9A27 /* GourmetDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetDetailViewModel.swift; sourceTree = "<group>"; };
 		8257E8432849AC4C00BC9A27 /* TagViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewComponent.swift; sourceTree = "<group>"; };
-		8257E8452849AD8E00BC9A27 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		8257E8482849B41500BC9A27 /* GourmetDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetDetailRepository.swift; sourceTree = "<group>"; };
 		8257E84A2849B47C00BC9A27 /* GourmetDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				8257E8432849AC4C00BC9A27 /* TagViewComponent.swift */,
-				8257E8452849AD8E00BC9A27 /* SwiftUIView.swift */,
 			);
 			path = SharedComponents;
 			sourceTree = "<group>";
@@ -252,7 +249,6 @@
 				8257E8492849B41500BC9A27 /* GourmetDetailRepository.swift in Sources */,
 				8257E8442849AC4C00BC9A27 /* TagViewComponent.swift in Sources */,
 				821608912848F82400436350 /* Endpoint.swift in Sources */,
-				8257E8462849AD8E00BC9A27 /* SwiftUIView.swift in Sources */,
 				821608832848EEE100436350 /* HomeView.swift in Sources */,
 				821608752847766300436350 /* ContentView.swift in Sources */,
 				8257E8412849AA9200BC9A27 /* GourmetDetailViewModel.swift in Sources */,
