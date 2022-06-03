@@ -8,7 +8,15 @@
 import Foundation
 import Combine
 
-final class HomeViewModel: ObservableObject {
+protocol HomeViewModelProtocol: ObservableObject {
+    var gourmetCategories: [GourmetCategory] { get }
+    var gourmetList: [GourmetList] { get }
+    var isLoading: Bool { get }
+    
+    func fetchData()
+}
+
+final class HomeViewModel: ObservableObject, HomeViewModelProtocol {
     
     @Published var gourmetCategories: [GourmetCategory] = []
     @Published var gourmetList: [GourmetList] = []

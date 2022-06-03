@@ -8,9 +8,9 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct HomeView: View {
+struct HomeView<ViewModel>: View where ViewModel: HomeViewModelProtocol{
     
-    @ObservedObject var viewModel: HomeViewModel
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         ZStack {
