@@ -9,7 +9,7 @@ import Foundation
 
 struct GourmetDetail: Codable {
     let id: String
-    let price, displayPrice: Int
+    let price, displayPrice: Double
     let isDiscount: Bool
     let discountPercent: Int
     let imageURL: String
@@ -44,7 +44,7 @@ struct Addon: Codable {
 
 struct AddonItem: Codable {
     let id, name: String
-    let additionalPrice: Int
+    let additionalPrice: Double
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"

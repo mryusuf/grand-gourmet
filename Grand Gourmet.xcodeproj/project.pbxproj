@@ -151,10 +151,8 @@
 		8257E83D2849AA4400BC9A27 /* GourmetDetail */ = {
 			isa = PBXGroup;
 			children = (
-				8257E83E2849AA7800BC9A27 /* GourmetDetailView.swift */,
+				82A45274284BB2640098F013 /* Views */,
 				8257E8402849AA9200BC9A27 /* GourmetDetailViewModel.swift */,
-				82A45270284BA9D90098F013 /* CustomStepperViewComponent.swift */,
-				82A45272284BAC0F0098F013 /* GourmetAddonItemViewComponent.swift */,
 			);
 			path = GourmetDetail;
 			sourceTree = "<group>";
@@ -173,6 +171,16 @@
 			children = (
 				821608822848EEE100436350 /* HomeView.swift */,
 				82160895284907BD00436350 /* HomeGourmetViewComponent.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		82A45274284BB2640098F013 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8257E83E2849AA7800BC9A27 /* GourmetDetailView.swift */,
+				82A45270284BA9D90098F013 /* CustomStepperViewComponent.swift */,
+				82A45272284BAC0F0098F013 /* GourmetAddonItemViewComponent.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
