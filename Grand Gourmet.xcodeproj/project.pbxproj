@@ -24,6 +24,9 @@
 		8257E8442849AC4C00BC9A27 /* TagViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257E8432849AC4C00BC9A27 /* TagViewComponent.swift */; };
 		8257E8492849B41500BC9A27 /* GourmetDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257E8482849B41500BC9A27 /* GourmetDetailRepository.swift */; };
 		8257E84B2849B47C00BC9A27 /* GourmetDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257E84A2849B47C00BC9A27 /* GourmetDetailModel.swift */; };
+		8257E84D2849BC4800BC9A27 /* GourmetDescriptionViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257E84C2849BC4800BC9A27 /* GourmetDescriptionViewComponent.swift */; };
+		82A45271284BA9D90098F013 /* CustomStepperViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A45270284BA9D90098F013 /* CustomStepperViewComponent.swift */; };
+		82A45273284BAC0F0098F013 /* GourmetAddonItemViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A45272284BAC0F0098F013 /* GourmetAddonItemViewComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		8257E8432849AC4C00BC9A27 /* TagViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewComponent.swift; sourceTree = "<group>"; };
 		8257E8482849B41500BC9A27 /* GourmetDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetDetailRepository.swift; sourceTree = "<group>"; };
 		8257E84A2849B47C00BC9A27 /* GourmetDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetDetailModel.swift; sourceTree = "<group>"; };
+		8257E84C2849BC4800BC9A27 /* GourmetDescriptionViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetDescriptionViewComponent.swift; sourceTree = "<group>"; };
+		82A45270284BA9D90098F013 /* CustomStepperViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepperViewComponent.swift; sourceTree = "<group>"; };
+		82A45272284BAC0F0098F013 /* GourmetAddonItemViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetAddonItemViewComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,8 @@
 			children = (
 				8257E83E2849AA7800BC9A27 /* GourmetDetailView.swift */,
 				8257E8402849AA9200BC9A27 /* GourmetDetailViewModel.swift */,
+				82A45270284BA9D90098F013 /* CustomStepperViewComponent.swift */,
+				82A45272284BAC0F0098F013 /* GourmetAddonItemViewComponent.swift */,
 			);
 			path = GourmetDetail;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				8257E8432849AC4C00BC9A27 /* TagViewComponent.swift */,
+				8257E84C2849BC4800BC9A27 /* GourmetDescriptionViewComponent.swift */,
 			);
 			path = SharedComponents;
 			sourceTree = "<group>";
@@ -247,9 +256,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8257E8492849B41500BC9A27 /* GourmetDetailRepository.swift in Sources */,
+				8257E84D2849BC4800BC9A27 /* GourmetDescriptionViewComponent.swift in Sources */,
 				8257E8442849AC4C00BC9A27 /* TagViewComponent.swift in Sources */,
 				821608912848F82400436350 /* Endpoint.swift in Sources */,
+				82A45273284BAC0F0098F013 /* GourmetAddonItemViewComponent.swift in Sources */,
 				821608832848EEE100436350 /* HomeView.swift in Sources */,
+				82A45271284BA9D90098F013 /* CustomStepperViewComponent.swift in Sources */,
 				821608752847766300436350 /* ContentView.swift in Sources */,
 				8257E8412849AA9200BC9A27 /* GourmetDetailViewModel.swift in Sources */,
 				8257E83F2849AA7800BC9A27 /* GourmetDetailView.swift in Sources */,

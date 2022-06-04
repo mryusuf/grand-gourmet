@@ -16,7 +16,7 @@ protocol HomeViewModelProtocol: ObservableObject {
     func fetchData()
 }
 
-final class HomeViewModel: ObservableObject, HomeViewModelProtocol {
+final class HomeViewModel: HomeViewModelProtocol {
     
     @Published var gourmetCategories: [GourmetCategory] = []
     @Published var gourmetList: [GourmetList] = []

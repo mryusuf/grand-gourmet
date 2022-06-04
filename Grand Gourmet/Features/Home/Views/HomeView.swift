@@ -15,7 +15,7 @@ struct HomeView<ViewModel>: View where ViewModel: HomeViewModelProtocol{
     var body: some View {
         ZStack {
             if viewModel.isLoading {
-                loadingIndicator
+                ProgressView()
             } else {
                 content
             }
@@ -29,13 +29,6 @@ struct HomeView<ViewModel>: View where ViewModel: HomeViewModelProtocol{
 }
 
 extension HomeView {
-    
-    var loadingIndicator: some View {
-        VStack {
-            Text("Loading...")
-            ProgressView()
-        }
-    }
     
     var content: some View {
         ZStack {

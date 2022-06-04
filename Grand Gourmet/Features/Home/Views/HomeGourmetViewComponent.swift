@@ -22,19 +22,15 @@ struct HomeGourmetViewComponent: View {
                     Color.white
                     
                     HStack(alignment: .top) {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text(gourmet.name.capitalized)
-                                .font(.system(size: 12, weight: .semibold))
-                            
-                            Text(gourmet.itemDescription)
-                                .font(.system(size: 10))
-                            
-                            TagViewComponent(tags: gourmet.tags)
-                            
-                            Text("SDG \(gourmet.price.description)")
-                                .font(.system(size: 12, weight: .bold))
-                        }
-                        .padding(.init(top: 16, leading: 16, bottom: 10, trailing: 10))
+                        
+                        GourmetDescriptionViewComponent(
+                            name: gourmet.name,
+                            description: gourmet.itemDescription,
+                            tags: gourmet.tags,
+                            isDiscount: gourmet.isDiscount,
+                            displayPrice: gourmet.displayPrice.description,
+                            originalPrice: gourmet.price.description
+                        )
                         
                         Spacer()
                         
