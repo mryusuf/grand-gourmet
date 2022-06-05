@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		821608732847766300436350 /* Grand_GourmetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821608722847766300436350 /* Grand_GourmetApp.swift */; };
-		821608752847766300436350 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821608742847766300436350 /* ContentView.swift */; };
 		821608772847766500436350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821608762847766500436350 /* Assets.xcassets */; };
 		8216087A2847766500436350 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821608792847766500436350 /* Preview Assets.xcassets */; };
 		821608832848EEE100436350 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821608822848EEE100436350 /* HomeView.swift */; };
@@ -32,7 +31,6 @@
 /* Begin PBXFileReference section */
 		8216086F2847766300436350 /* Grand Gourmet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grand Gourmet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		821608722847766300436350 /* Grand_GourmetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grand_GourmetApp.swift; sourceTree = "<group>"; };
-		821608742847766300436350 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		821608762847766500436350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		821608792847766500436350 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		821608822848EEE100436350 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -87,9 +85,7 @@
 				821608882848F40300436350 /* Repositories */,
 				821608802848EBC100436350 /* Features */,
 				821608722847766300436350 /* Grand_GourmetApp.swift */,
-				821608742847766300436350 /* ContentView.swift */,
-				821608762847766500436350 /* Assets.xcassets */,
-				821608782847766500436350 /* Preview Content */,
+				82A45275284C4B3B0098F013 /* SupportingFiles */,
 			);
 			path = "Grand Gourmet";
 			sourceTree = "<group>";
@@ -185,6 +181,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		82A45275284C4B3B0098F013 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				821608762847766500436350 /* Assets.xcassets */,
+				821608782847766500436350 /* Preview Content */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,7 +275,6 @@
 				82A45273284BAC0F0098F013 /* GourmetAddonItemViewComponent.swift in Sources */,
 				821608832848EEE100436350 /* HomeView.swift in Sources */,
 				82A45271284BA9D90098F013 /* CustomStepperViewComponent.swift in Sources */,
-				821608752847766300436350 /* ContentView.swift in Sources */,
 				8257E8412849AA9200BC9A27 /* GourmetDetailViewModel.swift in Sources */,
 				8257E83F2849AA7800BC9A27 /* GourmetDetailView.swift in Sources */,
 				8257E84B2849B47C00BC9A27 /* GourmetDetailModel.swift in Sources */,
