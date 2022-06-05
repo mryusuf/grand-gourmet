@@ -59,7 +59,7 @@ struct TagViewComponent: View {
     
     private func item(for text: String) -> some View {
         Text(text)
-            .font(.system(size: 10, weight: .semibold))
+            .font(.system(size: 9, weight: .semibold))
             .padding(.init(top: 2, leading: 4, bottom: 2, trailing: 4))
             .background(Color.blue.opacity(0.2))
             .foregroundColor(Color.blue)

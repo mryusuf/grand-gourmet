@@ -41,99 +41,110 @@ struct GourmetDetailView<ViewModel>: View where ViewModel: GourmetDetailViewMode
 extension GourmetDetailView {
     
     var content: some View {
-        ZStack(alignment: .bottom) {
+        VStack(alignment: .center) {
             
-            List {
-                // Image and Description Section
-                Section {
-                    VStack(spacing: 15) {
-                        WebImage(url: URL(string: viewModel.gourmet?.imageURL ?? ""))
-                            .resizable()
-                            .indicator(.activity)
-                            .transition(.fade(duration: 0.5))
-                            .aspectRatio(contentMode: .fill)
-                            .frame(maxWidth: .infinity)
-                            .cornerRadius(15)
-                            .clipped()
-                        
-                        GourmetDescriptionViewComponent(
-                            name: viewModel.gourmet?.name ?? "",
-                            description: viewModel.gourmet?.gourmetDetailDescription ?? "",
-                            tags: viewModel.gourmet?.tags ?? [],
-                            isDiscount: viewModel.gourmet?.isDiscount ?? false,
-                            displayPrice: viewModel.gourmet?.displayPrice.description  ?? "",
-                            originalPrice: viewModel.gourmet?.price.description ?? ""
-                        )
-                        
-                        Spacer()
-                    }
-                }
-                
-                // Variants Section
-                Section {
-                    VStack(alignment: .leading) {
-                        Text("Variants")
-                            .bold()
-                        
-                        Menu {
-                            Picker(selection: $selectedVariant, label: EmptyView()) {
-                                ForEach(viewModel.gourmet?.variants ?? [], id: \.self.name) { variant in
-                                    Text(variant.name)
-                                }
-                            }
-                            .frame(maxWidth: .infinity)
-                            
-                        } label: {
-                            dropdownLabel
-                        }
-                        
-                        Spacer()
-                    }
-                }
-                
-                // Addon Section
-                // TODO: add Addon checkboxes and stepper
-                ForEach(viewModel.gourmet?.addons ?? [], id: \.self.addonCategoryID) { (addon: Addon) in
+            Capsule()
+                .fill(Color.gray.opacity(0.3))
+                .frame(width: 30, height: 3)
+                .padding()
+            
+            ZStack(alignment: .bottom) {
+                List {
+                    // Image and Description Section
                     Section {
-                        if let firstItem = addon.addonItems[0] {
+                        VStack(spacing: 15) {
+                            WebImage(url: URL(string: viewModel.gourmet?.imageURL ?? ""))
+                                .resizable()
+                                .indicator(.activity)
+                                .transition(.fade(duration: 0.5))
+                                .aspectRatio(contentMode: .fill)
+                                .frame(maxWidth: .infinity)
+                                .cornerRadius(15)
+                                .clipped()
                             
-                            VStack(alignment: .leading, spacing: 15) {
-                                Text(addon.addonCateogryName.capitalized)
-                                    .bold()
+                            GourmetDescriptionViewComponent(
+                                name: viewModel.gourmet?.name ?? "",
+                                description: viewModel.gourmet?.gourmetDetailDescription ?? "",
+                                tags: viewModel.gourmet?.tags ?? [],
+                                isDiscount: viewModel.gourmet?.isDiscount ?? false,
+                                displayPrice: viewModel.gourmet?.displayPrice.description  ?? "",
+                                originalPrice: viewModel.gourmet?.price.description ?? ""
+                            )
+                            
+                            Spacer()
+                        }
+                    }
+                    
+                    listSeparatorViewComponent
+                    
+                    // Variants Section
+                    Section {
+                        VStack(alignment: .leading) {
+                            Text("Variants")
+                                .bold()
+                            
+                            Menu {
+                                Picker(selection: $selectedVariant, label: EmptyView()) {
+                                    ForEach(viewModel.gourmet?.variants ?? [], id: \.self.name) { variant in
+                                        Text(variant.name)
+                                    }
+                                }
+                                .frame(maxWidth: .infinity)
                                 
-                                GourmetAddonItemViewComponent(
-                                    name: firstItem.name,
-                                    addonPrice: "\(firstItem.additionalPrice.description)"
-                                )
-                                
+                            } label: {
+                                dropdownLabel
                             }
                             
-                            ForEach(addon.addonItems, id:\.self.id) { (addonItem: AddonItem) in
+                            Spacer()
+                        }
+                    }
+                    
+                    listSeparatorViewComponent
+                    
+                    // Addon Section
+                    // TODO: add Addon checkboxes and stepper
+                    ForEach(viewModel.gourmet?.addons ?? [], id: \.self.addonCategoryID) { (addon: Addon) in
+                        Section {
+                            if let firstItem = addon.addonItems[0] {
                                 
-                                if addonItem.id != firstItem.id {
+                                VStack(alignment: .leading, spacing: 15) {
+                                    Text(addon.addonCateogryName.capitalized)
+                                        .bold()
                                     
                                     GourmetAddonItemViewComponent(
-                                        name: addonItem.name,
-                                        addonPrice: "\(addonItem.additionalPrice.description)"
+                                        name: firstItem.name,
+                                        addonPrice: "\(firstItem.additionalPrice.description)"
                                     )
                                     
                                 }
+                                
+                                ForEach(addon.addonItems, id:\.self.id) { (addonItem: AddonItem) in
+                                    
+                                    if addonItem.id != firstItem.id {
+                                        
+                                        GourmetAddonItemViewComponent(
+                                            name: addonItem.name,
+                                            addonPrice: "\(addonItem.additionalPrice.description)"
+                                        )
+                                        
+                                    }
+                                }
                             }
                         }
+                        
+                        listSeparatorViewComponent
+                    }
+                    
+                    // NotesSection
+                    Section {
+                        notesSection
                     }
                 }
                 
-                // NotesSection
-                Section {
-                    notesSection
-                }
+                footerViewComponent
+                    .padding()
             }
-            .listRowInsets(EdgeInsets())
-            .listStyle(GroupedListStyle())
-            
-            
-            footerViewComponent
-                .padding()
+            .listStyle(.plain)
         }
     }
     
@@ -164,7 +175,9 @@ extension GourmetDetailView {
             TextField("E.g. no mushroom", text: $notes)
                 .lineLimit(4)
             
-            Spacer(minLength: 50)
+            Divider()
+            
+            Spacer(minLength: 100)
         }
     }
     
@@ -176,7 +189,7 @@ extension GourmetDetailView {
             Button(quantity == 0 ? "Add To Cart" : quantity > 0 ? "Add To Cart - SGD \(totalPrice.description)" : "Remove Item") {
                 
             }
-            .font(.caption)
+            .font(.caption.bold())
             .foregroundColor(Color.white)
             .frame(maxWidth: .infinity)
             .padding(12)
@@ -186,6 +199,13 @@ extension GourmetDetailView {
             )
             .background(quantity == 0 ? Color.gray : quantity > 0 ? Color.blue : Color.red)
         }
+    }
+    
+    var listSeparatorViewComponent: some View {
+        Rectangle()
+            .fill(Color.gray.opacity(0.1))
+            .frame(height: 10)
+            .padding([.horizontal], -20)
     }
 }
 

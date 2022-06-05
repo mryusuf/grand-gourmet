@@ -12,17 +12,17 @@ struct GourmetDescriptionViewComponent: View {
     var name: String
     var description: String
     var tags: [String]
-    var isDiscount: Bool = false
+    var isDiscount: Bool
     var displayPrice: String
-    var originalPrice: String = ""
+    var originalPrice: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(name.capitalized)
-                .font(.caption.weight(.semibold))
+                .font(.subheadline)
             
             Text(description)
-                .font(.caption2)
+                .font(.system(size: 10).weight(.light))
             
             TagViewComponent(tags: tags)
             
@@ -41,5 +41,6 @@ struct GourmetDescriptionViewComponent: View {
                     .font(.caption.bold())
             }
         }
+        .foregroundColor(Color.black)
     }
 }
