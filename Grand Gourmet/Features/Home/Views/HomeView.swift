@@ -104,7 +104,6 @@ extension HomeView {
             
             
         }
-        .background(Color.black.opacity(0.06))
     }
     
     var cartViewComponent: some View {

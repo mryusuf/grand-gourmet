@@ -10,7 +10,6 @@ import SwiftUI
 struct CustomStepperViewComponent : View {
     @Binding var value: Int
     var maxValue: Int
-    var footerPadding = EdgeInsets(top: 10, leading: 12, bottom: 10, trailing: 12)
     
     var body: some View {
         HStack {
@@ -25,11 +24,12 @@ struct CustomStepperViewComponent : View {
                     .foregroundColor(Color.gray)
                     .padding([.vertical], 10)
                 
-            })
+            }).buttonStyle(BorderlessButtonStyle())
             
             
             Text("\(value < 0 ? 0 : value)")
                 .font(.system(size: 12, weight: .bold))
+                .frame(width: 20)
             
             Button(action: {
                 if self.value < maxValue {
@@ -39,13 +39,9 @@ struct CustomStepperViewComponent : View {
             }, label: {
                 Image(systemName: "plus")
                     .foregroundColor(Color.gray)
-            })
+                    .padding([.vertical], 4)
+            }).buttonStyle(BorderlessButtonStyle())
         }
-        .padding(footerPadding)
-        .overlay(
-            RoundedRectangle(cornerRadius: 5)
-                .stroke(.gray, lineWidth: 1)
-        )
     }
     
     func feedback() {

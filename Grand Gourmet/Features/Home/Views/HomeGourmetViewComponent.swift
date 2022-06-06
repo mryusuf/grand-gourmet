@@ -41,6 +41,7 @@ extension HomeGourmetViewComponent {
                     
                         ZStack(alignment: .topTrailing) {
                             WebImage(url: URL(string: gourmet.imageURL))
+                                .maxBufferSize(nil)
                                 .resizable()
                                 .indicator(.activity)
                                 .transition(.fade(duration: 0.5))
@@ -103,6 +104,7 @@ extension HomeGourmetViewComponent {
                 
                 ZStack(alignment: .topTrailing) {
                     WebImage(url: URL(string: gourmet.imageURL))
+                        .maxBufferSize(nil)
                         .resizable()
                         .indicator(.activity)
                         .transition(.fade(duration: 0.5))

@@ -54,6 +54,7 @@ extension GourmetDetailView {
                     Section {
                         VStack(spacing: 15) {
                             WebImage(url: URL(string: viewModel.gourmet?.imageURL ?? ""))
+                                .maxBufferSize(nil)
                                 .resizable()
                                 .indicator(.activity)
                                 .transition(.fade(duration: 0.5))
@@ -114,7 +115,10 @@ extension GourmetDetailView {
                                     GourmetAddonItemViewComponent(
                                         name: firstItem.name,
                                         addonPrice: "\(firstItem.additionalPrice.description)"
-                                    )
+                                    ) { (amount: Int) in
+                                        print(amount)
+                                        addonPrice += (Double(amount) * firstItem.additionalPrice)
+                                    }
                                     
                                 }
                                 
@@ -125,7 +129,10 @@ extension GourmetDetailView {
                                         GourmetAddonItemViewComponent(
                                             name: addonItem.name,
                                             addonPrice: "\(addonItem.additionalPrice.description)"
-                                        )
+                                        ) { (amount: Int) in
+                                            print(amount)
+                                            addonPrice += (Double(amount) * firstItem.additionalPrice)
+                                        }
                                         
                                     }
                                 }
@@ -145,6 +152,8 @@ extension GourmetDetailView {
                     .padding()
             }
             .listStyle(.plain)
+            .background(Color.white)
+            .foregroundColor(Color.black)
         }
     }
     
@@ -184,6 +193,11 @@ extension GourmetDetailView {
     var footerViewComponent: some View {
         HStack {
             CustomStepperViewComponent(value: $quantity, maxValue: 25)
+                .padding(EdgeInsets(top: 10, leading: 12, bottom: 10, trailing: 12))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(.gray, lineWidth: 1)
+                )
                 .background(Color.white)
             
             Button(quantity == 0 ? "Add To Cart" : quantity > 0 ? "Add To Cart - SGD \(totalPrice.description)" : "Remove Item") {
