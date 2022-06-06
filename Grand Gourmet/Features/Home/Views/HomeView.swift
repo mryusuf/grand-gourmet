@@ -89,16 +89,18 @@ extension HomeView {
                 .shadow(color: .black.opacity(0.5), radius: 4, x: 1, y: 5))
             
             ScrollView(.vertical, showsIndicators: false) {
-                ForEach(self.viewModel.gourmetList, id: \.categoryID) { (list: GourmetList) in
-                    
-                    HomeGourmetViewComponent(list: list)
-                    
-                }.background(GeometryReader { proxy -> Color in
-                    DispatchQueue.main.async {
-                        scrollOffset = -proxy.frame(in: .named("scroll")).origin.y
-                    }
-                    return Color.clear
-                })
+                LazyVStack {
+                    ForEach(self.viewModel.gourmetList, id: \.categoryID) { (list: GourmetList) in
+                        
+                        HomeGourmetViewComponent(list: list)
+                        
+                    }.background(GeometryReader { proxy -> Color in
+                        DispatchQueue.main.async {
+                            scrollOffset = -proxy.frame(in: .named("scroll")).origin.y
+                        }
+                        return Color.clear
+                    })
+                }
             }
             .coordinateSpace(name: "scroll")
             

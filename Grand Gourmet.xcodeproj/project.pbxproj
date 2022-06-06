@@ -26,6 +26,7 @@
 		8257E84D2849BC4800BC9A27 /* GourmetDescriptionViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8257E84C2849BC4800BC9A27 /* GourmetDescriptionViewComponent.swift */; };
 		82A45271284BA9D90098F013 /* CustomStepperViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A45270284BA9D90098F013 /* CustomStepperViewComponent.swift */; };
 		82A45273284BAC0F0098F013 /* GourmetAddonItemViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A45272284BAC0F0098F013 /* GourmetAddonItemViewComponent.swift */; };
+		82A7AD3B284D9A5500FE67C6 /* LazyReleaseableWebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A7AD3A284D9A5500FE67C6 /* LazyReleaseableWebImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		8257E84C2849BC4800BC9A27 /* GourmetDescriptionViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetDescriptionViewComponent.swift; sourceTree = "<group>"; };
 		82A45270284BA9D90098F013 /* CustomStepperViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepperViewComponent.swift; sourceTree = "<group>"; };
 		82A45272284BAC0F0098F013 /* GourmetAddonItemViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetAddonItemViewComponent.swift; sourceTree = "<group>"; };
+		82A7AD3A284D9A5500FE67C6 /* LazyReleaseableWebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyReleaseableWebImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			children = (
 				8257E8432849AC4C00BC9A27 /* TagViewComponent.swift */,
 				8257E84C2849BC4800BC9A27 /* GourmetDescriptionViewComponent.swift */,
+				82A7AD3A284D9A5500FE67C6 /* LazyReleaseableWebImage.swift */,
 			);
 			path = SharedComponents;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				821608872848F0B600436350 /* HomeModel.swift in Sources */,
 				8216088D2848F5C300436350 /* HomeRepository.swift in Sources */,
 				821608852848EEEA00436350 /* HomeViewModel.swift in Sources */,
+				82A7AD3B284D9A5500FE67C6 /* LazyReleaseableWebImage.swift in Sources */,
 				82160896284907BD00436350 /* HomeGourmetViewComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
